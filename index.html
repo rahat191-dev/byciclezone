@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BycicleZone</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/navbar.css">
+    <link rel="stylesheet" href="assets/css/product.css">
+</head>
+<body>
+    <header class="nav-header">
+       <a href="#home" class="brands"><h1>BycicleZone</h1></a>
+        <nav class="nav-links">
+            <a href="#home">Home</a>
+                <div class="brands">
+                    <a href="#brands">Brands <span>&#9662;</span></a>
+                <div class="dropdown-content">
+    <button onclick="filterProducts('all')">All</button>
+    <button onclick="filterProducts('walton')">Walton</button>
+    <button onclick="filterProducts('phoenix')">Phoenix</button>
+                </div>
+                </div>
+                <a href="#contact">Contact</a>
+        </nav>
+    </header>
+  <section class="product-section">
+    <div class="product-container">
+      <div class="product-image">
+        <img src="" alt="Product Image">
+      </div>
+        <div class="slider-buttons">
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+      </div>
+      <div class="product-details">
+        <h2 class="product-name"></h2>
+        <p class="product-model"></p>
+        <p class="product-price"></p>
+      </div>
+    </div>
+  </section>
+    <script src="assets/js/product.js"></script>
+</body>
+</html>
