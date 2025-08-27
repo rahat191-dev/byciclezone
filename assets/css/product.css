@@ -2,10 +2,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 70vh;
 }
 
 .product-container {
+    margin-top: 100px;
     display: flex;
     max-width: 1000px;
     width: 100%;
@@ -14,7 +15,7 @@
 
 .product-image {
     position: relative;
-    width: 50%;
+    width: 100%;
     transition: opacity 0.5s ease-in-out;
 }
 .product-image.fade-in {
@@ -56,6 +57,9 @@
 }
 
 .product-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 50%;
     padding: 40px;
     opacity: 0;
@@ -79,4 +83,9 @@
 .slider-buttons {
 display: flex;
 justify-content: space-between;
+opacity: 20%;
+transition: all 1s ease;
+}
+.slider-buttons:hover {
+    opacity: 100%;
 }
