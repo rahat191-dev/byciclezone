@@ -89,3 +89,17 @@ transition: all 1s ease;
 .slider-buttons:hover {
     opacity: 100%;
 }
+@media (max-width: 768px) {
+    .product-section {
+        flex-direction: column;
+        align-items: center;
+    }
+    .product-image,
+    .product-details {
+        width: 100%;
+    }
+
+    .product-details {
+        padding: 20px;
+    }
+}
