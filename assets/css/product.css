@@ -29,7 +29,7 @@
 
 .prev, .next {
     cursor: pointer;
-    position: fixed;
+    position: absolute;
     top: 50%;
     transform: translateY(-50%);
     width: auto;
@@ -102,12 +102,4 @@ transition: all 1s ease;
     .product-details {
         padding: 20px;
     }
-    .slider-buttons {
-        display: flex;
-        justify-content: space-between;
-        opacity: 20%;
-        transition: all 1s ease;
-    }
-    .slider-buttons:hover {
-        opacity: 100%;
-    }
+    
