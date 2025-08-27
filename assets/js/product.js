@@ -48,33 +48,42 @@ function showProduct(index) {
         productModel.textContent = `Model: ${filteredProducts[index].model}`;
         productPrice.textContent = `Price: ${filteredProducts[index].price}`;
         productDetails.classList.add('fade-in');
-        productImageContainer.style.transition = 'none';
-    }, 500);
+    }, 10);
 }
 
 function plusSlides(n) {
     productImageContainer.style.transition = 'transform 0.5s ease-in-out, opacity 0.5s ease-in-out';
-    productImageContainer.style.transform = `translateX(${n > 0 ? '-' : ''}100%)`;
+    productImageContainer.style.transform = `translateX(${n > 0 ? '-100%' : '100%'})`;
     productImageContainer.style.opacity = 0;
 
     setTimeout(() => {
         currentProductIndex += n;
-
         if (currentProductIndex >= filteredProducts.length) {
             currentProductIndex = 0;
         }
-
         if (currentProductIndex < 0) {
             currentProductIndex = filteredProducts.length - 1;
         }
 
         showProduct(currentProductIndex);
-        productImageContainer.style.transform = 'translateX(0)';
-        productImageContainer.style.opacity = 1;
+
+        productImageContainer.style.transition = 'none';
+        productImageContainer.style.transform = `translateX(${n > 0 ? '100%' : '-100%'})`;
+
+        setTimeout(() => {
+            productImageContainer.style.transition = 'transform 0.5s ease-in-out, opacity 0.5s ease-in-out';
+            productImageContainer.style.transform = 'translateX(0)';
+            productImageContainer.style.opacity = 1;
+        }, 20);
+
     }, 500);
 }
 
 function filterProducts(brand) {
+    productImageContainer.style.transition = 'none';
+    productImageContainer.style.transform = 'translateX(0)';
+    productImageContainer.style.opacity = 1;
+
     if (brand === 'all') {
         filteredProducts = products;
     } else {
