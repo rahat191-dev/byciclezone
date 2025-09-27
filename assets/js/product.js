@@ -2,29 +2,29 @@ const products = [
     {
         image: '/assets/images/walton1.png',
         name: 'Walton Cycle 1',
-        model: 'XXX',
-        price: 'XXX',
+        model: '1',
+        price: '1000',
         brand: 'walton'
     },
     {
         image: '/assets/images/walton2.png',
         name: 'Walton Cycle 2',
-        model: 'XXX',
-        price: 'XXX',
+        model: '2',
+        price: '2000',
         brand: 'walton'
     },
     {
         image: '/assets/images/phoenix1.png',
         name: 'Phoenix Cycle 1',
-        model: 'XXX',
-        price: 'XXX',
+        model: '3',
+        price: '3000',
         brand: 'phoenix'
     },
     {
         image: '/assets/images/phoenix2.png',
         name: 'Phoenix Cycle 2',
-        model: 'XXX',
-        price: 'XXX',
+        model: '4',
+        price: '4000',
         brand: 'phoenix'
     }
 ];
@@ -46,7 +46,7 @@ function showProduct(index) {
         productImage.src = filteredProducts[index].image;
         productName.textContent = filteredProducts[index].name;
         productModel.textContent = `Model: ${filteredProducts[index].model}`;
-        productPrice.textContent = `Price: ${filteredProducts[index].price}`;
+        productPrice.textContent = `Price: $${filteredProducts[index].price}`;
         productDetails.classList.add('fade-in');
     }, 10);
 }
